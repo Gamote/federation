@@ -246,7 +246,7 @@ export function extractSubgraphsFromSupergraph(supergraph: Schema): Subgraphs {
           break;
         case 'UnionType':
           if (type.membersCount() === 0) {
-            type.remove();
+            type.removeRecursive();
           }
           break;
       }
